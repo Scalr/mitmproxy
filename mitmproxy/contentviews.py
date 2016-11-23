@@ -14,10 +14,10 @@ requests, the query parameters are passed as the ``query`` keyword argument.
 """
 from __future__ import absolute_import, print_function, division
 
-import cssutils
+#import cssutils
 import datetime
 import html2text
-import jsbeautifier
+#import jsbeautifier
 import json
 import logging
 import lxml.etree
@@ -25,8 +25,8 @@ import lxml.html
 import six
 import subprocess
 import traceback
-from PIL import ExifTags
-from PIL import Image
+#from PIL import ExifTags
+#from PIL import Image
 from mitmproxy import exceptions
 from mitmproxy.contrib.wbxml import ASCommandResponse
 from netlib import http
@@ -410,42 +410,42 @@ class ViewCSS(View):
         return "CSS", format_text(beautified)
 
 
-class ViewImage(View):
-    name = "Image"
-    prompt = ("image", "i")
-    content_types = [
-        "image/png",
-        "image/jpeg",
-        "image/gif",
-        "image/vnd.microsoft.icon",
-        "image/x-icon",
-    ]
+# class ViewImage(View):
+#     name = "Image"
+#     prompt = ("image", "i")
+#     content_types = [
+#         "image/png",
+#         "image/jpeg",
+#         "image/gif",
+#         "image/vnd.microsoft.icon",
+#         "image/x-icon",
+#     ]
 
-    def __call__(self, data, **metadata):
-        try:
-            img = Image.open(BytesIO(data))
-        except IOError:
-            return None
-        parts = [
-            ("Format", str(img.format_description)),
-            ("Size", "%s x %s px" % img.size),
-            ("Mode", str(img.mode)),
-        ]
-        for i in sorted(img.info.keys()):
-            if i != "exif":
-                parts.append(
-                    (str(i), str(img.info[i]))
-                )
-        if hasattr(img, "_getexif"):
-            ex = img._getexif()
-            if ex:
-                for i in sorted(ex.keys()):
-                    tag = ExifTags.TAGS.get(i, i)
-                    parts.append(
-                        (str(tag), str(ex[i]))
-                    )
-        fmt = format_dict(multidict.MultiDict(parts))
-        return "%s image" % img.format, fmt
+#     def __call__(self, data, **metadata):
+#         try:
+#             img = Image.open(BytesIO(data))
+#         except IOError:
+#             return None
+#         parts = [
+#             ("Format", str(img.format_description)),
+#             ("Size", "%s x %s px" % img.size),
+#             ("Mode", str(img.mode)),
+#         ]
+#         for i in sorted(img.info.keys()):
+#             if i != "exif":
+#                 parts.append(
+#                     (str(i), str(img.info[i]))
+#                 )
+#         if hasattr(img, "_getexif"):
+#             ex = img._getexif()
+#             if ex:
+#                 for i in sorted(ex.keys()):
+#                     tag = ExifTags.TAGS.get(i, i)
+#                     parts.append(
+#                         (str(tag), str(ex[i]))
+#                     )
+#         fmt = format_dict(multidict.MultiDict(parts))
+#         return "%s image" % img.format, fmt
 
 
 class ViewProtobuf(View):
@@ -580,11 +580,11 @@ add(ViewXML())
 add(ViewWBXML())
 add(ViewHTML())
 add(ViewHTMLOutline())
-add(ViewJavaScript())
-add(ViewCSS())
+#add(ViewJavaScript())
+#add(ViewCSS())
 add(ViewURLEncoded())
 add(ViewMultipart())
-add(ViewImage())
+#add(ViewImage())
 add(ViewQuery())
 
 if pyamf:
