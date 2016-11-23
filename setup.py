@@ -74,7 +74,7 @@ setup(
         "hyperframe>=4.0.1, <5",
         "jsbeautifier>=1.6.3, <1.7",
         "lxml>=3.5.0, <=3.6.0",  # no wheels for 3.6.1 yet.
-        "Pillow>=3.2, <3.5",
+        #"Pillow>=3.2, <3.5",
         "passlib>=1.6.5, <1.7",
         "pyasn1>=0.1.9, <0.2",
         "pyOpenSSL>=16.0, <17.0",
