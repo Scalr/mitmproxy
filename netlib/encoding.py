@@ -10,7 +10,7 @@ from io import BytesIO
 
 import gzip
 import zlib
-import brotli
+#import brotli
 
 from typing import Union  # noqa
 
@@ -131,12 +131,12 @@ def encode_gzip(content):
     return s.getvalue()
 
 
-def decode_brotli(content):
-    return brotli.decompress(content)
+# def decode_brotli(content):
+#     return brotli.decompress(content)
 
 
-def encode_brotli(content):
-    return brotli.compress(content)
+# def encode_brotli(content):
+#     return brotli.compress(content)
 
 
 def decode_deflate(content):
@@ -166,14 +166,14 @@ custom_decode = {
     "identity": identity,
     "gzip": decode_gzip,
     "deflate": decode_deflate,
-    "br": decode_brotli,
+    #"br": decode_brotli,
 }
 custom_encode = {
     "none": identity,
     "identity": identity,
     "gzip": encode_gzip,
     "deflate": encode_deflate,
-    "br": encode_brotli,
+    #"br": encode_brotli,
 }
 
 __all__ = ["encode", "decode"]
