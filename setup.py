@@ -66,21 +66,21 @@ setup(
         "certifi>=2015.11.20.1",  # no semver here - this should always be on the last release!
         "configargparse>=0.10, <0.12",
         "construct>=2.5.2, <2.6",
-        "cryptography>=1.3, <1.6",
-        #"cssutils>=1.0.1, <1.1",
+        #"cryptography>=1.3, <1.6",  # not using pyinstaller
+        #"cssutils>=1.0.1, <1.1",  # not using css analyser
         "Flask>=0.10.1, <0.12",
         "h2>=2.4.1, <2.5",
         "html2text>=2016.1.8, <=2016.9.19",
         "hyperframe>=4.0.1, <5",
-        #"jsbeautifier>=1.6.3, <1.7",
+        #"jsbeautifier>=1.6.3, <1.7",  # not using js analyser
         "lxml>=3.5.0, <=3.6.0",  # no wheels for 3.6.1 yet.
-        #"Pillow>=3.2, <3.5",
+        #"Pillow>=3.2, <3.5",  # not using image analyser
         "passlib>=1.6.5, <1.7",
         "pyasn1>=0.1.9, <0.2",
         "pyOpenSSL>=16.0, <17.0",
         "pyparsing>=2.1.3, <2.2",
         "pyperclip>=1.5.22, <1.6",
-        "requests>=2.9.1, <2.12",
+        "requests>=2.12",
         "six>=1.10, <1.11",
         "tornado>=4.3, <4.5",
         "urwid>=1.3.1, <1.4",
