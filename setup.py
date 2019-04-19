@@ -68,7 +68,6 @@ setup(
         "construct>=2.5.2, <2.6",
         #"cryptography>=1.3, <1.6",  # not using pyinstaller
         #"cssutils>=1.0.1, <1.1",  # not using css analyser
-        "Flask>=0.10.1, <0.12",
         "h2>=2.4.1, <2.5",
         "html2text>=2016.1.8, <=2016.9.19",
         "hyperframe>=4.0.1, <5",
@@ -102,6 +101,7 @@ setup(
         ],
         'dev': [
             "tox>=2.3, <3",
+            "Flask>=0.10.1, <0.12",
             "mock>=2.0, <2.1",
             "pytest>=3, <3.1",
             "pytest-cov>=2.2.1, <3",
