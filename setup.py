@@ -75,7 +75,7 @@ setup(
         "lxml>=3.5.0, <=3.6.0",  # no wheels for 3.6.1 yet.
         #"Pillow>=3.2, <3.5",  # not using image analyser
         "passlib>=1.6.5, <1.7",
-        "pyasn1>=0.1.9, <=0.4.2",
+        "pyasn1>=0.1.9, <=0.4.6",
         "pyopenssl>=19.0",
         "pyparsing>=2.1.3, <2.2",
         "pyperclip>=1.5.22, <1.6",
