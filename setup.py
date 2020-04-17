@@ -72,7 +72,7 @@ setup(
         "html2text>=2016.1.8, <=2016.9.19",
         "hyperframe>=4.0.1, <5",
         #"jsbeautifier>=1.6.3, <1.7",  # not using js analyser
-        "lxml>=4.2.0, <=4.3.0",  # conform locustio from devel.in
+        #"lxml==4.3.0",  # conform locustio from devel.in
         #"Pillow>=3.2, <3.5",  # not using image analyser
         "passlib>=1.6.5, <1.7",
         "pyasn1>=0.1.9, <=0.4.6",
